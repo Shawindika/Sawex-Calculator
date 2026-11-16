@@ -1,0 +1,664 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #f3e8ff, #fce7f3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background: #ffffff;
+    width: 340px;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 15px 30px rgba(80, 60, 150, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #635bdb;
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%;
+    height: 75px;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 15px;
+    background: #eef0ff;
+    box-shadow: inset 4px 4px 8px #d5d8ec,
+                inset -4px -4px 8px #ffffff;
+    text-align: right;
+    font-size: 28px;
+    color: #333;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+}
+
+button {
+    height: 58px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #e4e7f5);
+    color: #454568;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #c7cbe0,
+                0 9px 12px rgba(0,0,0,0.12);
+    transition: 0.1s;
+}
+
+button:hover {
+    filter: brightness(1.08);
+}
+
+button:active {
+    transform: translateY(5px);
+    box-shadow: 0 1px 0 #c7cbe0;
+}
+
+.operator {
+    background: linear-gradient(145deg, #8b9bff, #5865e8);
+    color: white;
+    box-shadow: 0 6px 0 #3947b8;
+}
+
+.clear {
+    background: linear-gradient(145deg, #ff9292, #f04468);
+    color: white;
+    box-shadow: 0 6px 0 #c52e50;
+}
+
+.delete {
+    background: linear-gradient(145deg, #ffc078, #ff8c42);
+    color: white;
+    box-shadow: 0 6px 0 #d76a24;
+}
+
+.equal {
+    background: linear-gradient(145deg, #5ce6a0, #16b978);
+    color: white;
+    box-shadow: 0 6px 0 #098c57;
+    grid-row: span 2;
+    height: 129px;
+}
+
+.zero {
+    grid-column: span 2;
+}/* Colourful 3D Upgrade */
+
+.calculator {
+    background: linear-gradient(145deg, #ffffff, #e8eaff);
+}
+
+button:not(.clear):not(.delete):not(.operator):not(.equal):not(.zero) {
+    background: linear-gradient(145deg, #d9faff, #71d9f5);
+    color: #075985;
+    box-shadow: 0 6px 0 #32a9cf,
+                0 9px 12px #0002;
+}
+
+.zero {
+    background: linear-gradient(145deg, #ffe58a, #ffbd35);
+    color: #744400;
+    box-shadow: 0 6px 0 #d99512;
+}
+
+.operator {
+    background: linear-gradient(145deg, #8b5cf6, #5424d6);
+    color: white;
+    box-shadow: 0 6px 0 #37149c;
+}
+
+.clear {
+    background: linear-gradient(145deg, #ff668b, #ed174f);
+    box-shadow: 0 6px 0 #b50939;
+}
+
+.delete {
+    background: linear-gradient(145deg, #ffb347, #ff7417);
+    box-shadow: 0 6px 0 #c94e00;
+}
+
+.equal {
+    background: linear-gradient(145deg, #55f5a0, #00b968);
+    box-shadow: 0 6px 0 #008447;
+}
+
+button {
+    transition: transform 0.12s, filter 0.12s;
+}
+
+button:hover {
+    filter: brightness(1.12) saturate(1.2);
+}/* MATTE BLACK THEME */
+
+body {
+    background: #101010;
+}
+
+.calculator {
+    background: #202020;
+    box-shadow: 0 20px 45px #000000aa;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+#display {
+    background: #111111;
+    color: #ffffff;
+    box-shadow: inset 4px 4px 8px #080808,
+                inset -3px -3px 8px #292929;
+}
+
+button:not(.clear):not(.delete):not(.operator):not(.equal):not(.zero) {
+    background: linear-gradient(145deg, #383838, #242424);
+    color: #ffffff;
+    box-shadow: 0 6px 0 #111111,
+                0 9px 12px #00000066;
+}
+
+.zero {
+    background: linear-gradient(145deg, #383838, #242424);
+    color: white;
+    box-shadow: 0 6px 0 #111111;
+}
+
+.operator {
+    background: linear-gradient(145deg, #387bff, #1745c9);
+    color: white;
+    box-shadow: 0 6px 0 #102c80;
+}
+
+.clear {
+    background: linear-gradient(145deg, #ff5368, #d91e43);
+    color: white;
+    box-shadow: 0 6px 0 #8e102b;
+}
+
+.delete {
+    background: linear-gradient(145deg, #ffad42, #e76b15);
+    color: white;
+    box-shadow: 0 6px 0 #99400b;
+}
+
+.equal {
+    background: linear-gradient(145deg, #45ed9b, #00a963);
+    color: #062b19;
+    box-shadow: 0 6px 0 #00663b;
+}
+
+button:hover {
+    filter: brightness(1.18);
+}/* BLACK & YELLOW THEME */
+
+body {
+    background: #080808;
+}
+
+.calculator {
+    background: #f5c928;
+    border: 2px solid #d9a900;
+    box-shadow: 0 15px 35px #000000aa;
+}
+
+h1 {
+    color: #171717;
+}
+
+#display {
+    background: #171717;
+    color: #ffffff;
+    box-shadow: inset 4px 4px 8px #080808,
+                inset -3px -3px 8px #333333;
+}
+
+/* Number buttons */
+
+button:not(.clear):not(.delete):not(.operator):not(.equal):not(.zero) {
+    background: linear-gradient(145deg, #ffffff, #e5e5e5);
+    color: #222222;
+    box-shadow: 0 6px 0 #a88a25;
+}
+
+.zero {
+    background: linear-gradient(145deg, #ffffff, #e5e5e5);
+    color: #222222;
+    box-shadow: 0 6px 0 #a88a25;
+}/* BLACK & YELLOW THEME */
+
+body {
+    background: #080808;
+}
+
+.calculator {
+    background: #f5c928;
+    border: 2px solid #d9a900;
+    box-shadow: 0 15px 35px #000000aa;
+}
+
+h1 {
+    color: #171717;
+}
+
+#display {
+    background: #171717;
+    color: #ffffff;
+    box-shadow: inset 4px 4px 8px #080808,
+                inset -3px -3px 8px #333333;
+}
+
+/* Number buttons */
+
+button:not(.clear):not(.delete):not(.operator):not(.equal):not(.zero) {
+    background: linear-gradient(145deg, #ffffff, #e5e5e5);
+    color: #222222;
+    box-shadow: 0 6px 0 #a88a25;
+}
+
+.zero {
+    background: linear-gradient(145deg, #ffffff, #e5e5e5);
+    color: #222222;
+    box-shadow: 0 6px 0 #a88a25;
+}/* VISIBLE ANIMATED STAR SKY */
+
+body {
+    background-color: #030712 !important;
+
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, white 98%, transparent),
+        radial-gradient(2px 2px at 100px 120px, #93c5fd 98%, transparent),
+        radial-gradient(3px 3px at 180px 70px, white 98%, transparent),
+        radial-gradient(2px 2px at 250px 200px, #ffffff 98%, transparent),
+        radial-gradient(2px 2px at 300px 40px, #a5b4fc 98%, transparent),
+        linear-gradient(135deg, #030712, #111827, #08051b) !important;
+
+    background-size:
+        350px 300px,
+        350px 300px,
+        350px 300px,
+        350px 300px,
+        350px 300px,
+        100% 100% !important;
+
+    animation: starSky 15s linear infinite;
+}
+
+@keyframes starSky {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 350px 300px;
+    }
+}
+
+.calculator {
+    position: relative;
+    z-index: 2;
+    background: #f5c928 !important;
+}.star-particle {
+    position: fixed;
+    width: 7px;
+    height: 7px;
+    background: #fff36b;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: 0 0 8px #fff36b,
+                0 0 18px #ffca28;
+    animation: starBurst 650ms ease-out forwards;
+}
+
+@keyframes starBurst {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(0);
+        opacity: 0;
+    }
+}/* Colourful 3D Number Buttons */
+
+button:not(.clear):not(.delete):not(.operator):not(.equal):not(.zero) {
+    background: linear-gradient(145deg, #a78bfa, #7138d8) !important;
+    color: white !important;
+    box-shadow: 0 6px 0 #48209b,
+                0 9px 14px #0005 !important;
+}
+
+.zero {
+    background: linear-gradient(145deg, #42e8f5, #078bbd) !important;
+    color: #062b3b !important;
+    box-shadow: 0 6px 0 #075578 !important;
+}
+
+button:hover {
+    filter: brightness(1.2) !important;
+}/* PURE BLACK STAR BACKGROUND */
+
+body {
+    background: #000000 !important;
+    background-image: none !important;
+    position: relative;
+    isolation: isolate;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(2px 2px at 10% 20%, #ffffff 98%, transparent),
+        radial-gradient(2px 2px at 30% 70%, #ffffff 98%, transparent),
+        radial-gradient(3px 3px at 70% 25%, #ffffff 98%, transparent),
+        radial-gradient(2px 2px at 85% 80%, #ffffff 98%, transparent),
+        radial-gradient(2px 2px at 50% 50%, #fff36b 98%, transparent),
+        radial-gradient(2px 2px at 90% 10%, #ffffff 98%, transparent);
+
+    background-size: 300px 300px;
+    animation: starMove 25s linear infinite;
+}
+
+@keyframes starMove {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 300px 300px;
+    }
+}/* LIGHT GREY BACKGROUND */
+
+body {
+    background: #eeeeee !important;
+}
+
+/* Keep the calculator frame dark */
+.calculator {
+    background: #202020;
+}/* BLACK SKY + LIGHT YELLOW FRAME */
+
+body {
+    background: #000000 !important;
+}
+
+.calculator {
+    background: linear-gradient(
+        145deg,
+        #fff2a6,
+        #ffdf55,
+        #ffc928
+    ) !important;
+
+    border: 1px solid #ffe98a;
+
+    box-shadow: 0 10px 25px #00000066;
+
+    border-radius: 28px;
+}
+
+}
+
+h1 {
+    color: #242424 !important;
+}
+
+#display {
+    background: #171717 !important;
+    color: #ffffff !important;
+}
+/* SPACE INTRO */
+.intro-screen {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 9999;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: opacity 0.8s ease;
+}
+
+/* STARS */
+.stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, white 99%, transparent),
+        radial-gradient(2px 2px at 70% 20%, white 99%, transparent),
+        radial-gradient(2px 2px at 40% 70%, white 99%, transparent),
+        radial-gradient(2px 2px at 85% 60%, white 99%, transparent),
+        radial-gradient(2px 2px at 15% 80%, white 99%, transparent);
+    background-size: 180px 180px;
+    animation: starsMove 15s linear infinite;
+}
+
+/* PLANETS */
+.moon {
+    position: absolute;
+    top: 12%;
+    right: 15%;
+    font-size: 55px;
+    animation: moonFloat 4s ease-in-out infinite;
+}
+
+.earth {
+    position: absolute;
+    bottom: 15%;
+    left: 12%;
+    font-size: 75px;
+    animation: planetSpin 8s linear infinite;
+}
+
+.saturn {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-size: 75px;
+    animation: saturnFloat 5s ease-in-out infinite;
+}
+
+.mars {
+    position: absolute;
+    right: 18%;
+    bottom: 20%;
+    font-size: 38px;
+    animation: marsFloat 4s ease-in-out infinite;
+}
+
+/* COMET */
+.comet
+ {
+    position: absolute;
+    font-size: 35px;
+    top: -60px;
+    right: -60px;
+    animation: cometFly 3s linear infinite;
+}
+
+/* WELCOME */
+.welcome-text {
+    color: #ffe680;
+    font-size: 38px;
+    letter-spacing: 10px;
+    z-index: 2;
+    animation: welcomeAppear 1.5s ease forwards;
+}
+
+.welcome-sub {
+    color: #aaa;
+    font-size: 10px;
+    letter-spacing: 4px;
+    z-index: 2;
+    animation: welcomeAppear 2s ease forwards;
+}
+
+/* ANIMATIONS */
+@keyframes moonFloat {
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes planetSpin {
+    50% { transform: rotate(180deg) scale(1.08); }
+}
+
+@keyframes saturnFloat {
+    50% { transform: translateY(18px) rotate(15deg); }
+}
+
+@keyframes marsFloat {
+    50% { transform: translateY(-12px); }
+}
+
+ @keyframes cometFly {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-120vw, 120vh);
+        opacity: 0;
+    }
+}
+    
+@keyframes starsMove {
+    to { background-position: 180px 180px; }
+}
+
+@keyframes welcomeAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes introFade {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}#enterBtn {
+    margin-top: 25px;
+    padding: 13px 35px;
+    background: transparent;
+    color: #ffe680;
+    border: 2px solid #ffe680;
+    border-radius: 30px;
+    font-size: 15px;
+    letter-spacing: 4px;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+#enterBtn:hover {
+    background: #ffe680;
+    color: #000;
+    box-shadow: 0 0 15px #ffe68066;
+}
+
+.intro-screen.exit {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease;
+}
+.calculator {
+    opacity: 0;
+    visibility: hidden;
+    animation: none !important;
+    transition: opacity 0.8s ease;
+}#enterBtn {
+    background: transparent;
+    color: #ff3333;
+    border: 2px solid #ff3333;
+    box-shadow: 0 0 8px #ff333366;
+    transition: 0.3s ease;
+}
+
+#enterBtn:hover {
+    background: #ff3333;
+    color: white;
+    box-shadow:
+        0 0 10px #ff3333,
+        0 0 25px #ff3333;
+}#enterBtn {
+    background: #111 !important;
+    color: #ff3333 !important;
+    border: 1px solid #ff3333 !important;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 14px;
+    letter-spacing: 4px;
+
+    box-shadow:
+        0 0 8px #ff333366,
+        0 0 18px #ff222244;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#enterBtn:hover {
+    background: #ff3333 !important;
+    color: white !important;
+    box-shadow: 0 0 25px #ff3333;
+}#enterBtn {
+    background: #ff2020 !important;
+    color: white !important;
+    border: 2px solid #ff2020 !important;
+
+    box-shadow:
+        0 0 10px #ff2020,
+        0 0 25px #ff202077 !important;
+
+    text-shadow: 0 0 5px white;
+    transform: none !important;
+    transition: 0.3s ease;
+}
+
+#enterBtn:hover {
+    background: #d90000 !important;
+    box-shadow: 0 0 30px #ff2020 !important;
+}.brand-name {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 13px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    opacity: 0.65;
+    text-shadow: 0 0 10px #ffffff;
+}
